@@ -14,13 +14,13 @@
             {% if user.is_authenticated %}
             <a href="{% url 'snippet_list' %}" class="btn btn-outline-light">Home</a>
             <a href="{% url 'snippet_new' %}" class="btn btn-outline-light">Create</a>
-            <a href="{% url 'logout' %}" class="btn btn-outline-light">Logout</a>
+            <a href="{% url 'Logout' %}" class="btn btn-outline-light">Logout</a>
 
 
             {% else %}
 
-            <a href="{% url 'login' %}" class="btn btn-outline-light">Login</a>
-            <a href="{% url 'signup' %}" class="btn btn-outline-light">Signup</a>
+            <a href="{% url 'Login' %}" class="btn btn-outline-light">Login</a>
+            <a href="{% url 'Signup' %}" class="btn btn-outline-light">Signup</a>
             {% endif %}
 
 
