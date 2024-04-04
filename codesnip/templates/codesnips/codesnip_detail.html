@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-body">
+                    <h1 class="fs-5">{{snippet.title}}</h1>
+                    <p>{{snippet.text}}</p>
+                </div>
+                <div class="card-footer">
+                    <a href=""  class="btn btn-sm btn-primary">Back</a>
+                    <a href="" class="btn btn-sm btn-warning">Edit</a>
+                    <a href="" class="btn btn-sm btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

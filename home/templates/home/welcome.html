@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col">
+        <div class="home-holder text-center">
+            <h1 class="fs-3">
+                Hello, World!!
+            </h1>
+            <p>Welcoome to Your Note Keeper</p>
+            <a href="{% url 'snippet_list'  %}" class="btn btn-success btn-sm">See Notes</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

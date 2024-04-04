@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Howdoi</title>
+</head>
+<body>
+    <h1>Howdoi</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="query">Enter your question:</label><br>
+        <input type="text" id="query" name="query"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if query %}
+    <h2>Question: {{ query }}</h2>
+    <h2>Answer:</h2>
+    <pre>{{ answer }}</pre>
+    {% endif %}
+</body>
+</html>

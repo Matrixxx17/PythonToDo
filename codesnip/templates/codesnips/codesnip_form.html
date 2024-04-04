@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+       <div class="card">
+        <div class="card-header">Create Note</div>
+        <div class="card-body"><form action="{% url 'snippet_create' %}" method="post">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" class="btn btn-sm btn-success">Submit</button>
+        </form>
+        
+            {% if form.errors %}
+               <div class="alert alert-danger">
+                {{forms.errors}}
+               </div>
+        
+            {% endif %}</div>
+       </div>
+    
+
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col">
+        <div class="snippet_list_heading text-centre mb-3">
+            <h1 class="fs-4">
+                These are the notes
+            </h1>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    {% for snip in snip %}
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">{{snip.title}}</div>
+            <div class="card-body"><p>{{snip.text|truncatechars:100}}</p></div>
+            <div class="card-footer">
+                <a href="{% url 'snippet_detail' pk=snip.id %}" class="btn btn-info btn-sm">View Note</a>
+            </div>
+        </div>
+    </div>
+    {% endfor  %}
+</div>
+
+{% endblock %}
